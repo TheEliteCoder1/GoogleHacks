@@ -1,0 +1,19 @@
+
+// Output:
+// Changes Color of Various Page Elements
+
+// Instructions:
+// Click on gmail link using inspect in webpage before pasting this script.
+
+var speed = 500 // milisecs
+
+setInterval(program, speed);
+
+function program() {
+  for (var i = 0; i < document.getElementsByTagName(`a`).length; i++) {
+      for (var j = 0; j < 1000; j++) {
+        document.getElementsByTagName(`a`)[i].style.color = `green`;
+        document.getElementsByTagName(`a`)[i].style.backgroundColor = `black`;
+    }
+  }
+}
