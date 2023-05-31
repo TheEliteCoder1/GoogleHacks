@@ -10,6 +10,7 @@
 var speed = 100 // milisecs
 var rotatedeg = 0;
 var allDivs = document.getElementsByTagName('div');
+var ContentDiv = document.getElementById("content")
 
 setInterval(program, speed);
 setInterval(changeBackground, speed);
@@ -36,7 +37,7 @@ function changeBackground() {
         rotatedeg = 0;
         rotateDeg();
     }
-    var ContentDiv = document.getElementById("content")
+    
     ContentDiv.className = "grid-container";
     for (var i = 0; i < ContentDiv.length; i++) {
         ContentDiv[i].className = "grid-item";
