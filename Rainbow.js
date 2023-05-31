@@ -8,9 +8,12 @@
 // 3) Paste script in console
 
 var speed = 100 // milisecs
+var rotatedeg = 0;
+var allDivs = document.getElementsByTagName('div');
 
 setInterval(program, speed);
 setInterval(changeBackground, speed);
+}
 
 function numberInRange(max, min) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -26,21 +29,19 @@ function program() {
 }
 
 function changeBackground() {
-  for (var i = 0; i < document.getElementsByTagName(`div`).length; i++) {
-    var Div = document.getElementsByTagName(`div`)[i];
-    Div.class = `grid-container`;
-    for (var j = 0; j < Div.childNodes.length; j++) {
-      var DivChild = Div.childNodes[j];
-      DivChild.class = `grid-item`;
+    if (rotatedeg < 360)
+    {
+        rotatedeg += 1;
+    } else {
+        rotatedeg = 0;
+        rotateDeg();
     }
-  }
-  for (var k = 0; k < document.getElementsByTagName(`body`).length; k++) {
-    var body = document.getElementsByTagName(`body`)[k];
-    body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
-    for (var l = 0; l < body.childNodes.length; l++) {
-        body.childNodes[i].style.color = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
-        body.childNodes[i].style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
+    var ContentDiv = document.getElementById("content")
+    ContentDiv.className = "grid-container";
+    for (var i = 0; i < ContentDiv.length; i++) {
+        ContentDiv[i].className = "grid-item";
     }
-  }
-  
+    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
+    document.body.appendChild(`<h1 style="color='white';transform:rotate(${rotatedeg}deg);">RAINBOW</h1>`)
 }
+  
