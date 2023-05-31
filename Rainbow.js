@@ -14,7 +14,7 @@ var ContentDiv = document.getElementById("content")
 
 setInterval(program, speed);
 setInterval(changeBackground, speed);
-}
+
 
 function numberInRange(max, min) {
     return Math.floor(Math.random() * (max - min + 1) + min);
