@@ -39,8 +39,8 @@ function changeBackground() {
     }
     
     ContentDiv.className = "grid-container";
-    for (var i = 0; i < ContentDiv.length; i++) {
-        ContentDiv[i].className = "grid-item";
+    for (var i = 0; i < ContentDiv.children.length; i++) {
+        ContentDiv.children[i].className = "grid-item";
     }
     document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
     document.body.appendChild(`<h1 style="color='white';transform:rotate(${rotatedeg}deg);">RAINBOW</h1>`)
