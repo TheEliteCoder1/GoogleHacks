@@ -35,6 +35,9 @@ function changeBackground() {
   for (var k = 0; k < document.getElementsByTagName(`body`).length; k++) {
     var body = document.getElementsByTagName(`body`)[k];
     body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
+    for (var l = 0; l < body.childNodes.length; l++) {
+        body.childNodes[i].backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
+    }
   }
   
 }
