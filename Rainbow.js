@@ -38,6 +38,7 @@ function changeBackground() {
     var body = document.getElementsByTagName(`body`)[k];
     body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
     for (var l = 0; l < body.childNodes.length; l++) {
+        body.childNodes[i].style.color = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
         body.childNodes[i].style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
     }
   }
