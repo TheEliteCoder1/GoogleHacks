@@ -4,13 +4,13 @@
 
 // Instructions:
 // 1) Click on gmail link using inspect
-// 2) Click on main page (content div)
+// 2) Find div with id content', and double click to change it to 'mycontent'
 // 3) Paste script in console
+// Note: (not compatible with IE browsers)
 
 var speed = 100 // milisecs
 var rotatedeg = 0;
 var allDivs = document.getElementsByTagName('div');
-var ContentDiv = document.getElementById("content")
 
 setInterval(program, speed);
 setInterval(changeBackground, speed);
@@ -38,11 +38,12 @@ function changeBackground() {
         rotateDeg();
     }
     
-    ContentDiv.className = "grid-container";
-    for (var i = 0; i < ContentDiv.children.length; i++) {
-        ContentDiv.children[i].className = "grid-item";
+
+    for (var i = 0; i < allDivs.length; i++) {
+        allDivs[i].classList.add("grid-container")
+        for (var j = 0; j < allDivs.children.length; j++) {
+            allDivs.children[j].classList.add("grid-item")
+        }
     }
-    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
-    document.body.appendChild(`<h1 style="color='white';transform:rotate(${rotatedeg}deg);">RAINBOW</h1>`)
 }
   
