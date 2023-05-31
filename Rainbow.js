@@ -3,7 +3,9 @@
 // Changes Colors to Rgb
 
 // Instructions:
-// Click on gmail link using inspect in webpage before pasting this script.
+// 1) Click on gmail link using inspect
+// 2) Click on main page (content div)
+// 3) Paste script in console
 
 var speed = 100 // milisecs
 
