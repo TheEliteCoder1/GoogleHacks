@@ -9,7 +9,7 @@
 
 var speed = 100; // milisecs
 var rotatedeg = 0;
-var allDivs = document.getElementsByTagName('div');
+var allDivs = document.querySelectorAll('div');
 
 setInterval(changeBackground, speed);
 
@@ -30,8 +30,8 @@ function changeBackground() {
     
 
    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
-   for (var i = 0; i < document.body.getElementsByTagName("div").length; i++) {
-       document.body.getElementsByTagName("div").backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
+   for (var i = 0; i < allDivs.length; i++) {
+       allDivs("div").backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    }
 };
   
