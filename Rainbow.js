@@ -1,6 +1,6 @@
 
 // Output:
-// Changes Colors to Rgb
+// Makes page go Rainbow!
 
 // Instructions:
 // 1) Find div with id 'content', click on it
@@ -30,8 +30,8 @@ function changeBackground() {
     
 
    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
-   for (var i = 0; i < document.body.getElementsByTagName("iframe").children.length; i++) {
-       console.log(document.body.getElementsByTagName("iframe").children[i]);
+   for (var i = 0; i < document.body.getElementsByTagName("*").children.length; i++) {
+       document.body.getElementsByTagName("*").children.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    }
 };
   
