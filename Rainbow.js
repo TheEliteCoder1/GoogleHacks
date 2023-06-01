@@ -30,8 +30,8 @@ function changeBackground() {
     
 
    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
-   for (var i = 0; i < document.body.getElementsByTagName("*").children.length; i++) {
-       document.body.getElementsByTagName("*").children.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
+   for (var i = 0; i < document.body.getElementsByTagName("div").length; i++) {
+       document.body.getElementsByTagName("div").backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    }
 };
   
