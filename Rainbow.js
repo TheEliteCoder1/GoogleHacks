@@ -32,10 +32,6 @@ function changeBackground() {
    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    for (var i = 0; i < allDivs.length; i++) {
        allDivs[i].style.color = `white`;
-       if (allDivs[i].id == "docs-titlebar-buttons")
-       {
-           allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
-       }
        allDivs[i].style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    }
 };
