@@ -20,7 +20,7 @@ function numberInRange(max, min) {
 
 
 function changeBackground() {
-    if (rotatedeg < 360)
+    if (rotatedeg < 90)
     {
         rotatedeg += 1;
     } else {
@@ -32,7 +32,7 @@ function changeBackground() {
    document.body.style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    for (var i = 0; i < allDivs.length; i++) {
        allDivs[i].style.color = `white`;
-       if (i < 200)
+       if (i < 30)
        {
            allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
        }
