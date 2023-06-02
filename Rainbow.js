@@ -10,7 +10,8 @@
 var speed = 100; // milisecs
 var rotatedeg = 0;
 var allDivs = document.querySelectorAll('div');
-setInterval(changeBackground, speed);
+
+window.onload = setInterval(changeBackground, speed);
 
 
 function numberInRange(max, min) {
