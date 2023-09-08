@@ -7,7 +7,7 @@
 // 2) Paste script in console
 // Note: (not compatible with IE browsers)
 
-var speed = 100; // milisecs
+var speed = 200; // milisecs
 var rotatedeg = 0;
 var allDivs = document.querySelectorAll('div');
 
