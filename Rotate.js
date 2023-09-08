@@ -31,8 +31,9 @@ function changeBackground() {
   
    for (var i = 0; i < allDivs.length; i++) {
         allDivs[i].style.color = `white`;
-        allDivs[i].style.transform = `skew(${rotatedeg}deg, -${rotatedeg}deg); scaleX(${rotatedeg}px);`;
-       
+        // comment diffrent features
+        //allDivs[i].style.transform = `skew(${rotatedeg}deg, ${rotatedeg}deg); scaleX(${rotatedeg}px);`;
+        ///allDivs[i].style.transform = `matrix(${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg});`;
         //allDivs[i].style.backgroundColor = `rgba(${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0, 255)}, ${numberInRange(0.5, 1)})`;
    }
 };
