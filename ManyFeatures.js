@@ -10,7 +10,7 @@
 var speed = 100; // milisecs
 var rotatedeg = 0;
 var allDivs = document.querySelectorAll('div');
-var randomColorLimit = 10;
+var shakeFactor = 1;
 
 window.onload = setInterval(changeBackground, speed);
 
@@ -24,17 +24,17 @@ document.onkeypress = function (e) {
     e = e || window.event;
     var pressedKey = String.fromCharCode(e.keyCode)
     if (pressedKey == "w") {
-        if (randomColorLimit < 255) {
-            randomColorLimit += 1
+        if (shakeFactor < 6) {
+            shakeFactor += 1
         } else {
-            alert("You cannot have a randomColorLimit greater than 255.")
+            alert("You cannot have a shakeFactor greater than 6.")
         }
     }
     if (pressedKey == "s") {
-        if (randomColorLimit > 0) {
-            randomColorLimit -= 1
+        if (shakeFactor > 1) {
+            shakeFactor -= 1
         } else {
-            alert("You cannot have a randomColorLimit less than 0.")
+            alert("You cannot have a shakeFactor less than 1.")
         }
     }
     
@@ -42,7 +42,7 @@ document.onkeypress = function (e) {
 
 
 function changeBackground() {
-    if (rotatedeg < randomColorLimit)
+    if (rotatedeg < shakeFactor)
     {
         rotatedeg += 1;
     } else {
@@ -52,12 +52,9 @@ function changeBackground() {
 
   
    for (var i = 0; i < allDivs.length; i++) {
-        //allDivs[i].style.color = `white`;
         // comment diffrent features
         //allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
-        allDivs[i].style.transform = `translate(${Math.sin(rotatedeg)}px, ${Math.cos(rotatedeg)}px)`;
-        //allDivs[i].style.transform = `matrix(${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg})`;
-        //allDivs[i].style.backgroundColor = `rgba(${numberInRange(0, randomColorLimit)}, ${numberInRange(0, randomColorLimit)}, ${numberInRange(0, randomColorLimit)}, ${numberInRange(0.5, 1)})`;
+        allDivs[i].style.transform = `translate(${Math.sin(rotatedeg) * shakeFactor}px, ${Math.cos(rotatedeg) * shakeFactor}px)`;
    }
 };
   
