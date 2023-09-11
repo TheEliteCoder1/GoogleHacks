@@ -53,6 +53,7 @@ function changeBackground() {
   
    for (var i = 0; i < allDivs.length; i++) {
         // comment diffrent features
+        allDivs[i].appendChild(document.createTextNode("Dance!"));
         //allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
         allDivs[i].style.transform = `translate(${Math.sin(rotatedeg) * shakeFactor}px, ${Math.cos(rotatedeg) * shakeFactor}px)`;
    }
