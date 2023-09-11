@@ -60,6 +60,7 @@ function changeBackground() {
            var div = document.createElement('div');
            div.innerHTML = "Dance!"
            allDivs[i].appendChild(div);
+           danceTexts += 1
        }
         //allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
         allDivs[i].style.transform = `translate(${Math.sin(rotatedeg) * shakeFactor}px, ${Math.cos(rotatedeg) * shakeFactor}px)`;
