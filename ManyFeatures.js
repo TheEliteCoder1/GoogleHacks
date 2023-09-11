@@ -7,7 +7,7 @@
 // 2) Paste script in console
 // Note: (not compatible with IE browsers)
 
-var speed = 200; // milisecs
+var speed = 10; // milisecs
 var rotatedeg = 0;
 var allDivs = document.querySelectorAll('div');
 var randomColorLimit = 10;
@@ -42,7 +42,7 @@ document.onkeypress = function (e) {
 
 
 function changeBackground() {
-    if (rotatedeg < 5)
+    if (rotatedeg < randomColorLimit)
     {
         rotatedeg += 1;
     } else {
@@ -52,11 +52,14 @@ function changeBackground() {
 
   
    for (var i = 0; i < allDivs.length; i++) {
-        allDivs[i].style.color = `white`;
+        //allDivs[i].style.color = `white`;
         // comment diffrent features
         //allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
+        var xPos = Math.sin(rotatedeg);
+        var YPos = Math.cos(rotatedeg);
+        allDivs[i].style.transform = `translate(${xPos}px, ${yPos}px)`;
         //allDivs[i].style.transform = `matrix(${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg},${rotatedeg})`;
-        allDivs[i].style.backgroundColor = `rgba(${numberInRange(0, randomColorLimit)}, ${numberInRange(0, randomColorLimit)}, ${numberInRange(0, randomColorLimit)}, ${numberInRange(0.5, 1)})`;
+        //allDivs[i].style.backgroundColor = `rgba(${numberInRange(0, randomColorLimit)}, ${numberInRange(0, randomColorLimit)}, ${numberInRange(0, randomColorLimit)}, ${numberInRange(0.5, 1)})`;
    }
 };
   
