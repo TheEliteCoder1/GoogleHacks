@@ -11,6 +11,8 @@ var speed = 100; // milisecs
 var rotatedeg = 0;
 var allDivs = document.querySelectorAll('div');
 var shakeFactor = 1;
+var maxDanceTexts = 10;
+var danceTexts = 0;
 
 window.onload = setInterval(changeBackground, speed);
 
@@ -53,7 +55,12 @@ function changeBackground() {
   
    for (var i = 0; i < allDivs.length; i++) {
         // comment diffrent features
-        allDivs[i].appendChild(document.createTextNode("Dance!"));
+       if (danceTexts < maxDanceTexts)
+       {
+           var div = document.createElement('div');
+           div.innerHTML = "Dance!"
+           allDivs[i].appendChild(div);
+       }
         //allDivs[i].style.transform = `rotate(${rotatedeg}deg)`;
         allDivs[i].style.transform = `translate(${Math.sin(rotatedeg) * shakeFactor}px, ${Math.cos(rotatedeg) * shakeFactor}px)`;
    }
