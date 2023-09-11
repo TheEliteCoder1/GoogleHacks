@@ -20,7 +20,7 @@ function numberInRange(max, min) {
 
 
 function changeBackground() {
-    if (rotatedeg < 10)
+    if (rotatedeg < 5)
     {
         rotatedeg += 1;
     } else {
