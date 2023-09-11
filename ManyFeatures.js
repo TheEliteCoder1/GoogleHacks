@@ -12,6 +12,7 @@ var rotatedeg = 0;
 var allDivs = document.querySelectorAll('div');
 var shakeFactor = 1;
 var maxDanceTexts = 10;
+var maxShakeFactor = 12;
 var danceTexts = 0;
 
 window.onload = setInterval(changeBackground, speed);
@@ -26,10 +27,10 @@ document.onkeypress = function (e) {
     e = e || window.event;
     var pressedKey = String.fromCharCode(e.keyCode)
     if (pressedKey == "w") {
-        if (shakeFactor < 6) {
+        if (shakeFactor < maxShakeFactor) {
             shakeFactor += 1
         } else {
-            alert("You cannot have a shakeFactor greater than 6.")
+            alert("You cannot have a shakeFactor greater than ${maxShakeFactor}.")
         }
     }
     if (pressedKey == "s") {
